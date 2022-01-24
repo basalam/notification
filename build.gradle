@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+buildscript {
+    ext.kotlin_version = "1.5.20"
+    ext.hilt_version = '2.38.1'
+
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.2"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    apply plugin: "com.jfrog.artifactory"
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+
+artifactory {
+    apply from: 'properties.gradle'
+
+    contextUrl = "https://repo.basalam.dev/artifactory"   //The base Artifactory URL if not overridden by the publisher/resolver
+    publish {
+        repository {
+            repoKey = 'bslm-gradle-local'
+            username = artifactory_user
+            password = artifactory_password
+            maven = true
+        }
+    }
+    resolve {
+        repository {
+            repoKey = 'bslm-gradle'
+            username = artifactory_user
+            password = artifactory_password
+            maven = true
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
