@@ -28,13 +28,6 @@ interface RemoteService {
     ): JsonObject?
 
     @GET
-    suspend fun receivedNotification(
-        @Url endPoint: String,
-        @Header("authorization") authorization: String,
-        @Query("notification_id") id: String
-    ): JsonObject?
-
-    @GET
     suspend fun clickedOnNotification(
         @Url endPoint: String,
         @Header("authorization") authorization: String,

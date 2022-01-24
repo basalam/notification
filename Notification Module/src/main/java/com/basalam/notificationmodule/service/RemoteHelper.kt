@@ -23,12 +23,6 @@ interface RemoteHelper {
         registerModel: RegisterModel
     ): JsonObject?
 
-    suspend fun receivedNotification(
-        endPoint: String,
-        authorization: String,
-        id: String
-    ): JsonObject?
-
     suspend fun clickedOnNotification(
         endPoint: String,
         authorization: String,

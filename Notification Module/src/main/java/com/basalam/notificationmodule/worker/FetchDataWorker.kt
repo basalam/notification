@@ -1,7 +1,6 @@
 package com.basalam.notificationmodule.worker
 
 import android.content.Context
-import android.util.Log
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.Data
@@ -11,11 +10,8 @@ import com.basalam.notificationmodule.repository.NotificationRepository
 import com.basalam.notificationmodule.utils.DataState
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.withContext
-
 import java.lang.Exception
 
 @HiltWorker
@@ -34,7 +30,7 @@ class FetchDataWorker @AssistedInject constructor(
         val className = inputData.getString(NotificationCore.CLASS_NAME)
         val notificationImage = inputData.getInt(
             NotificationCore.NOTIFICATION_IMAGE,
-            androidx.appcompat.R.drawable.abc_btn_check_material
+            androidx.appcompat.R.drawable.btn_radio_off_mtrl
         )
 
         if (endPoint != null && token != null && deviceId != null) {

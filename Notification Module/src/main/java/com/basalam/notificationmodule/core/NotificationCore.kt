@@ -22,18 +22,18 @@ class NotificationCore @Inject constructor() {
     private var notificationViewModel: NotificationViewModel? = null
 
     companion object {
-        var Channel_ID_DEFAULT: String = "Channel_ID_DEFAULT"
-        var NOTIFICATION_DATA: String = "NOTIFICATION_DATA"
-        var ENDPOINT_REQUEST: String = "ENDPOINT_REQUEST"
-        var TOKEN: String = "TOKEN"
-        var DEVICE_ID: String = "DEVICE_ID"
-        var NOTIFICATION_EXTRA: String = "NOTIFICATION_EXTRA"
-        var NOTIFICATION_ID: String = "NOTIFICATION_ID"
-        var NOTIFICATION_CLICK_ENDPOINT: String = "NOTIFICATION_CLICK_ENDPOINT"
-        var NOTIFICATION_IMAGE: String = "NOTIFICATION_IMAGE"
-        var NOTIFICATION_CLICK_DATA_EXTRA: String = "NOTIFICATION_CLICK_EXTRA"
-        var PACKAGE_NAME: String = "PACKAGE_NAME"
-        var CLASS_NAME: String = "CLASS_NAME"
+        const val Channel_ID_DEFAULT: String = "Channel_ID_DEFAULT"
+        const val NOTIFICATION_DATA: String = "NOTIFICATION_DATA"
+        const val ENDPOINT_REQUEST: String = "ENDPOINT_REQUEST"
+        const val TOKEN: String = "TOKEN"
+        const val DEVICE_ID: String = "DEVICE_ID"
+        const val NOTIFICATION_EXTRA: String = "NOTIFICATION_EXTRA"
+        const val NOTIFICATION_ID: String = "NOTIFICATION_ID"
+        const val NOTIFICATION_CLICK_ENDPOINT: String = "NOTIFICATION_CLICK_ENDPOINT"
+        const val NOTIFICATION_IMAGE: String = "NOTIFICATION_IMAGE"
+        const val NOTIFICATION_CLICK_DATA_EXTRA: String = "NOTIFICATION_CLICK_EXTRA"
+        const val PACKAGE_NAME: String = "PACKAGE_NAME"
+        const val CLASS_NAME: String = "CLASS_NAME"
     }
 
     fun init(
@@ -146,12 +146,6 @@ class NotificationCore @Inject constructor() {
         deviceId: String,
         isCustomerApp: Boolean = true
     ) = notificationViewModel?.unregisterUser(token, endPoint, deviceId, isCustomerApp)
-
-    fun receivedNotification(
-        endPoint: String,
-        token: String,
-        id: String
-    ) = notificationViewModel?.receivedNotification(endPoint, token, id)
 
     fun clickedOnNotification(
         endPoint: String,

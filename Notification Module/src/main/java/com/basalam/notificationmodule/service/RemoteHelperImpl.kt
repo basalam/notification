@@ -26,12 +26,6 @@ class RemoteHelperImpl @Inject constructor(
         registerModel: RegisterModel
     ): JsonObject? = remoteService.unregisterUser(endPoint, authorization, registerModel)
 
-    override suspend fun receivedNotification(
-        endPoint: String,
-        authorization: String,
-        id: String
-    ): JsonObject? = remoteService.receivedNotification(endPoint, authorization, id)
-
     override suspend fun clickedOnNotification(
         endPoint: String,
         authorization: String,

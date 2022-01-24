@@ -68,25 +68,6 @@ class NotificationRepositoryImpl @Inject constructor(
         emit(DataState.Error(Exception(it)))
     }
 
-    override fun receivedNotification(
-        endPoint: String,
-        authorization: String,
-        id: String
-    ): Flow<DataState<Boolean>> = flow {
-        try {
-            val res = remoteHelper.receivedNotification(
-                endPoint,
-                authorization,
-                id
-            )
-            emit(DataState.Success(res?.get("result")?.asBoolean!!))
-        } catch (e: Exception) {
-            emit(DataState.Error(e))
-        }
-    }.catch {
-        emit(DataState.Error(Exception(it)))
-    }
-
     override fun clickedOnNotification(
         endPoint: String,
         authorization: String,

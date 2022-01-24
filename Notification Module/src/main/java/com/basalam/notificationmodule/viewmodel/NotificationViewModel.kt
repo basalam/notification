@@ -1,6 +1,5 @@
 package com.basalam.notificationmodule.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.basalam.notificationmodule.repository.NotificationRepository
 import com.basalam.notificationmodule.utils.DataState
@@ -36,16 +35,6 @@ class NotificationViewModel @Inject constructor(
         authorization = token,
         deviceId = deviceId,
         isCustomerApp = isCustomerApp
-    ).shareIn(CoroutineScope(Dispatchers.IO), SharingStarted.Eagerly, 1)
-
-    fun receivedNotification(
-        endPoint: String,
-        token: String,
-        id: String
-    ): Flow<DataState<Boolean>> = notificationRepository.receivedNotification(
-        endPoint = endPoint,
-        authorization = token,
-        id = id
     ).shareIn(CoroutineScope(Dispatchers.IO), SharingStarted.Eagerly, 1)
 
     fun clickedOnNotification(
