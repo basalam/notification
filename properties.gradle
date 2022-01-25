@@ -1,0 +1,5 @@
+ext {
+    artifactory_user= "android"
+    artifactory_password="*****"
+    artifactory_contextUrl="https://repo.basalam.dev/artifactory"
+}
