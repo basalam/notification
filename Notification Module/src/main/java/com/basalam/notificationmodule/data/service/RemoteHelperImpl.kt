@@ -1,6 +1,6 @@
-package com.basalam.notificationmodule.service
+package com.basalam.notificationmodule.data.service
 
-import com.basalam.notificationmodule.model.RegisterModel
+import com.basalam.notificationmodule.domain.model.RegisterModel
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import javax.inject.Inject

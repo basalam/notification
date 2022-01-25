@@ -1,8 +1,8 @@
 package com.basalam.notificationmodule.di
 
-import com.basalam.notificationmodule.service.RemoteHelper
-import com.basalam.notificationmodule.service.RemoteHelperImpl
-import com.basalam.notificationmodule.service.RemoteService
+import com.basalam.notificationmodule.data.service.RemoteHelper
+import com.basalam.notificationmodule.data.service.RemoteHelperImpl
+import com.basalam.notificationmodule.data.service.RemoteService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

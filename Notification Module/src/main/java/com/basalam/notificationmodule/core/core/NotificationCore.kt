@@ -1,4 +1,4 @@
-package com.basalam.notificationmodule.core
+package com.basalam.notificationmodule.core.core
 
 import android.app.*
 import android.content.ComponentName
@@ -11,8 +11,8 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.work.*
-import com.basalam.notificationmodule.viewmodel.NotificationViewModel
-import com.basalam.notificationmodule.worker.FetchDataWorker
+import com.basalam.notificationmodule.core.viewmodel.NotificationViewModel
+import com.basalam.notificationmodule.core.worker.FetchDataWorker
 import com.google.gson.JsonObject
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject

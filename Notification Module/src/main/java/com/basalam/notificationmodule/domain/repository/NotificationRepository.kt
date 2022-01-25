@@ -1,6 +1,6 @@
-package com.basalam.notificationmodule.repository
+package com.basalam.notificationmodule.domain.repository
 
-import com.basalam.notificationmodule.utils.DataState
+import com.basalam.notificationmodule.common.DataState
 import com.google.gson.JsonArray
 import kotlinx.coroutines.flow.Flow
 

@@ -1,4 +1,4 @@
-package com.basalam.notificationmodule.utils
+package com.basalam.notificationmodule.common
 
 sealed class DataState<out R> {
     data class Success<out T>(val data: T) : DataState<T>()

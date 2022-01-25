@@ -1,4 +1,4 @@
-package com.basalam.notificationmodule.model
+package com.basalam.notificationmodule.domain.model
 
 import com.google.gson.annotations.SerializedName
 

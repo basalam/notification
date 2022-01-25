@@ -1,8 +1,9 @@
-package com.basalam.notificationmodule.repository
+package com.basalam.notificationmodule.data.repository
 
-import com.basalam.notificationmodule.model.RegisterModel
-import com.basalam.notificationmodule.service.RemoteHelper
-import com.basalam.notificationmodule.utils.DataState
+import com.basalam.notificationmodule.domain.model.RegisterModel
+import com.basalam.notificationmodule.data.service.RemoteHelper
+import com.basalam.notificationmodule.common.DataState
+import com.basalam.notificationmodule.domain.repository.NotificationRepository
 import com.google.gson.JsonArray
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch

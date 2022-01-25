@@ -1,8 +1,8 @@
-package com.basalam.notificationmodule.viewmodel
+package com.basalam.notificationmodule.core.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.basalam.notificationmodule.repository.NotificationRepository
-import com.basalam.notificationmodule.utils.DataState
+import com.basalam.notificationmodule.domain.repository.NotificationRepository
+import com.basalam.notificationmodule.common.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,13 +1,13 @@
-package com.basalam.notificationmodule.worker
+package com.basalam.notificationmodule.core.worker
 
 import android.content.Context
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.Data
 import androidx.work.WorkerParameters
-import com.basalam.notificationmodule.core.NotificationCore
-import com.basalam.notificationmodule.repository.NotificationRepository
-import com.basalam.notificationmodule.utils.DataState
+import com.basalam.notificationmodule.core.core.NotificationCore
+import com.basalam.notificationmodule.domain.repository.NotificationRepository
+import com.basalam.notificationmodule.common.DataState
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.catch

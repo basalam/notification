@@ -3,14 +3,8 @@ package com.basalam.notification
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStoreOwner
-import androidx.lifecycle.lifecycleScope
-import com.basalam.notificationmodule.core.NotificationCore
-import com.basalam.notificationmodule.viewmodel.NotificationViewModel
+import com.basalam.notificationmodule.core.core.NotificationCore
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint

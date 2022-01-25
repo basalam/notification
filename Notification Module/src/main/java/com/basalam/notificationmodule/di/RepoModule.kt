@@ -1,7 +1,7 @@
 package com.basalam.notificationmodule.di
 
-import com.basalam.notificationmodule.repository.NotificationRepository
-import com.basalam.notificationmodule.repository.NotificationRepositoryImpl
+import com.basalam.notificationmodule.domain.repository.NotificationRepository
+import com.basalam.notificationmodule.data.repository.NotificationRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
