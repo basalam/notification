@@ -23,7 +23,7 @@ object RemoteModule {
 
     @Singleton
     @Provides
-    fun provideBlogService(retrofit: Retrofit): RemoteService {
+    fun provideRemoteService(retrofit: Retrofit): RemoteService {
         return retrofit.create(RemoteService::class.java)
     }
 
