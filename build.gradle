@@ -18,9 +18,40 @@ buildscript {
 }
 
 allprojects {
+    apply plugin: 'maven-publish'
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.github.com/basalam/notification")
+        }
+    }
+}
+
+
+
+publishing {
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/basalam/notification")
+//            credentials {
+//                username = "alibahaaa"
+//                password = "************"
+//            }
+        }
+    }
+    publishing {
+        publications {
+            aar(MavenPublication) {
+                groupId = "com.basalam.notificationmodule"
+                artifactId = "notification"
+                version = "1.0.1"
+                // Tell maven to prepare the generated "*.aar" file for publishing
+                artifact("$rootDir/Notification Module/build/outputs/aar/Notification Module-release.aar")
+            }
+        }
     }
 }
 
