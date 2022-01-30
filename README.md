@@ -49,8 +49,8 @@ class App : Application(), Configuration.Provider {
 Your MainActivity class:
 
 ```kotlin
-    @Inject
-    lateinit var notificationCore: NotificationCore
+        @Inject
+        lateinit var notificationCore: NotificationCore
 ```
 
 To init library:
@@ -60,7 +60,7 @@ To init library:
 
 To Create Worker:
 ```kotlin
-    notificationCore.createWorker(
+        notificationCore.createWorker(
             application,
             token = "token",
             endPoint = "https://example.basalam.com/api/api_v1.0/notifications/",
