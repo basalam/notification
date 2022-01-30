@@ -5,7 +5,7 @@ A library to receive and show notiffication for Android.
 
  * Register or unregister user to your server.
  * Receive Notifictation per 15 minutes.
- * Show notification as soon as receive.
+ * Show notification as soon as received.
  * Handle on notification click.
 
 Download
