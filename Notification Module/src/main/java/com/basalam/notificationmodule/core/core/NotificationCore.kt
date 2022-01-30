@@ -77,6 +77,12 @@ class NotificationCore @Inject constructor() {
             .enqueue(work)
     }
 
+    fun cancelWorker(
+        application: Application
+    ) {
+        WorkManager.getInstance(application.applicationContext!!).cancelAllWork()
+    }
+
     private fun createNotificationDefaultChannel(
         application: Application
     ) {
