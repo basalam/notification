@@ -45,6 +45,10 @@ class App : Application(), Configuration.Provider {
             .build()
 }
 ```
+add App to manifest:
+```xml
+        android:name=".App"
+```
 
 Your MainActivity class:
 
