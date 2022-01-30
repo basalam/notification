@@ -55,6 +55,32 @@ publishing {
     }
 }
 
+publishing {
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/basalam/notification")
+            credentials {
+                username = "alibahaaa"
+                password = "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"
+            }
+        }
+    }
+    publishing {
+        publications {
+            aar(MavenPublication) {
+                groupId = "com.basalam.notificationmodule"
+                artifactId = "notification"
+                version = "1.0.1"
+                // Tell maven to prepare the generated "*.aar" file for publishing
+                artifact("$rootDir/Notification Module/build/outputs/aar/Notification Module-release.aar")
+            }
+        }
+    }
+}
+
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

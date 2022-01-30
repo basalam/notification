@@ -1,8 +1,2 @@
 ext {
-    artifactory_user = "android"
-    artifactory_password = "Iamherewithpassword1"
-    artifactory_contextUrl = "https://repo.basalam.dev/artifactory"
-
-    github_user = "alibahaaa"
-    github_token = "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"
 }
