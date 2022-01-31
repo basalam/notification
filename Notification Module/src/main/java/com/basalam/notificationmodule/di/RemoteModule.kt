@@ -9,6 +9,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -16,6 +17,7 @@ import javax.inject.Singleton
 object RemoteModule {
     @Singleton
     @Provides
+    @Named("notificationRetrofitService")
     fun provideApiService(): Retrofit = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
         .baseUrl("https://automation.basalam.com")
@@ -23,7 +25,8 @@ object RemoteModule {
 
     @Singleton
     @Provides
-    fun provideRemoteService(retrofit: Retrofit): RemoteService {
+    @Named("notificationRemoteService")
+    fun provideRemoteService(@Named("notificationRetrofitService") retrofit: Retrofit): RemoteService {
         return retrofit.create(RemoteService::class.java)
     }
 

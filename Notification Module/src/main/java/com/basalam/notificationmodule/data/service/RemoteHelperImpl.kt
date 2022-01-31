@@ -4,9 +4,10 @@ import com.basalam.notificationmodule.domain.model.RegisterModel
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import javax.inject.Inject
+import javax.inject.Named
 
 class RemoteHelperImpl @Inject constructor(
-    private val remoteService: RemoteService
+    @Named("notificationRemoteService") private val remoteService: RemoteService
 ) : RemoteHelper {
     override suspend fun getNotification(
         endPoint: String,
@@ -31,5 +32,4 @@ class RemoteHelperImpl @Inject constructor(
         authorization: String,
         id: String
     ): JsonObject? = remoteService.clickedOnNotification(endPoint, authorization, id)
-
 }
