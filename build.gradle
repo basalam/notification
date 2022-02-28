@@ -22,9 +22,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url = uri("https://maven.pkg.github.com/basalam/notification")
-        }
     }
 }
 
@@ -63,7 +60,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/basalam/notification")
             credentials {
                 username = "alibahaaa"
-                password = "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"
+                password = "**"
             }
         }
     }
