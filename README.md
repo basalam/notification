@@ -23,9 +23,15 @@ Add the repository to your build.gradle file:
 repositories {
     maven {
             url = uri("https://maven.pkg.github.com/basalam/notification")
+            credentials {
+                username = "alibahaaa"
+                password = "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"
+            }
         }
 }
 ```
+ask for credentials via ali.bahaabadi@basalam.com
+
 How to use
 --------
 
