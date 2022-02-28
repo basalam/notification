@@ -16,7 +16,9 @@ import com.basalam.notificationmodule.core.worker.FetchDataWorker
 import com.google.gson.JsonObject
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class NotificationCore @Inject constructor() {
 
     private var notificationViewModel: NotificationViewModel? = null
