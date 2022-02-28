@@ -34,6 +34,7 @@ class NotificationCore @Inject constructor() {
         const val NOTIFICATION_CLICK_DATA_EXTRA: String = "NOTIFICATION_CLICK_EXTRA"
         const val PACKAGE_NAME: String = "PACKAGE_NAME"
         const val CLASS_NAME: String = "CLASS_NAME"
+        const val NOTIFICATION_WORK_MANAGER_TAG: String = "NOTIFICATION_WORK_MANAGER_TAG"
     }
 
     fun init(
@@ -70,6 +71,7 @@ class NotificationCore @Inject constructor() {
 
         val work = PeriodicWorkRequestBuilder<FetchDataWorker>(15, TimeUnit.MINUTES)
             .setConstraints(constraints)
+            .addTag(NOTIFICATION_WORK_MANAGER_TAG)
             .setInputData(data.build())
             .build()
 
@@ -78,9 +80,10 @@ class NotificationCore @Inject constructor() {
     }
 
     fun cancelWorker(
-        application: Application
+        application: Application,
+        tag:String
     ) {
-        WorkManager.getInstance(application.applicationContext!!).cancelAllWork()
+        WorkManager.getInstance(application.applicationContext!!).cancelAllWorkByTag(tag)
     }
 
     private fun createNotificationDefaultChannel(
