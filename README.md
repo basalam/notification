@@ -24,8 +24,8 @@ repositories {
     maven {
             url = uri("https://maven.pkg.github.com/basalam/notification")
             credentials {
-                username = "alibahaaa"
-                password = "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"
+                username = "**"
+                password = "**"
             }
         }
 }
