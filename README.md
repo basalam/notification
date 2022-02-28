@@ -14,7 +14,7 @@ Download
 Add the package dependencies to your build.gradle file:
 ```kotlin
     dependencies {
-       implementation 'com.basalam.notificationmodule:notification:1.0.2'
+       implementation 'com.basalam.notificationmodule:notification:1.0.4'
     }
 ```
 
